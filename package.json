@@ -2,7 +2,7 @@
   "name": "info802_soap_service",
   "version": "1.0.0",
   "description": "ServiceSoapJs",
-  "main": "serveur.js",
+  "main": "Soap.js",
   "scripts": {
     "start": "node Soap.js"
   },
