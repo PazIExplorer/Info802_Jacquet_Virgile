@@ -18,7 +18,10 @@ var soapService =
                 
                 let prixSansFrais = (prixPoids + prixDist);
                 let prixTot = prixSansFrais * 1.33;
-                
+                console.log(prixPoids);
+                console.log(prixDist);
+                console.log(prixSansFrais);
+                console.log(prixTot);
                 return {
                     prixPoid: prixPoids,
                     prixDist: prixDist,
