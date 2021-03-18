@@ -14,12 +14,16 @@ xmlns:xsd="http://www.w3.org/2001/XMLSchema">
      <sequence>
       <element name="poids" type="xsd:int"/>
       <element name="distance" type="xsd:int"/>
+      <element name="prix" type="xsd::int"/>
      </sequence>
     </complexType>
    </element>
    <element name="coutLivraisonResponse">
     <complexType>
      <sequence>
+      <element name="prixPoid" type="xsd:float"/>
+      <element name="prixDist" type="xsd:float"/>
+      <element name="prixSansFrais" type="xsd:float"/>
       <element name="prixTotal" type="xsd:float"/>
      </sequence>
     </complexType>
@@ -43,6 +47,54 @@ xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 
    </wsdl:message>
 
+   <wsdl:portType name="prixPoid">
+
+      <wsdl:operation name="coutLivraison">
+
+         <wsdl:input message="impl:coutLivraisonRequest" name="coutLivraisonRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:coutLivraisonResponse" name="coutLivraisonResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:portType>
+
+   <wsdl:portType name="prixDist">
+
+      <wsdl:operation name="coutLivraison">
+
+         <wsdl:input message="impl:coutLivraisonRequest" name="coutLivraisonRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:coutLivraisonResponse" name="coutLivraisonResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:portType>
+
+   <wsdl:portType name="prixSansFrais">
+
+      <wsdl:operation name="coutLivraison">
+
+         <wsdl:input message="impl:coutLivraisonRequest" name="coutLivraisonRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:coutLivraisonResponse" name="coutLivraisonResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:portType>
+
    <wsdl:portType name="prixTotal">
 
       <wsdl:operation name="coutLivraison">
@@ -58,6 +110,74 @@ xmlns:xsd="http://www.w3.org/2001/XMLSchema">
       </wsdl:operation>
 
    </wsdl:portType>
+
+   <wsdl:binding name="prixPoidSoapBinding" type="impl:prixPoid">
+
+      <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+
+      <wsdl:operation name="coutLivraison">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="coutLivraisonRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="coutLivraisonResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:binding><wsdl:binding name="prixDistSoapBinding" type="impl:prixDist">
+
+      <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+
+      <wsdl:operation name="coutLivraison">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="coutLivraisonRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="coutLivraisonResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:binding><wsdl:binding name="prixSansFraisSoapBinding" type="impl:prixSansFrais">
+
+      <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+
+      <wsdl:operation name="coutLivraison">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="coutLivraisonRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="coutLivraisonResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:binding>
 
    <wsdl:binding name="prixTotalSoapBinding" type="impl:prixTotal">
 
@@ -83,7 +203,26 @@ xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 
    </wsdl:binding>
 
+
    <wsdl:service name="servicesCoutLivraison">
+
+      <wsdl:port binding="impl:prixPoidSoapBinding" name="prixPoid">
+
+         <wsdlsoap:address location="https://info802-soap-service.herokuapp.com/wsdl"/>
+
+      </wsdl:port>
+
+      <wsdl:port binding="impl:prixDistSoapBinding" name="prixDist">
+
+         <wsdlsoap:address location="https://info802-soap-service.herokuapp.com/wsdl"/>
+
+      </wsdl:port>
+
+      <wsdl:port binding="impl:prixSansFraisSoapBinding" name="prixSansFrais">
+
+         <wsdlsoap:address location="https://info802-soap-service.herokuapp.com/wsdl"/>
+
+      </wsdl:port>
 
       <wsdl:port binding="impl:prixTotalSoapBinding" name="prixTotal">
 
