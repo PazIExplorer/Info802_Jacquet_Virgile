@@ -32,7 +32,7 @@ let port = process.env.PORT || 3000;
 
 app.listen( port , function()
 {
-    soap.listen(app, '/wsdl', sSoap, xml, function (){
+    soap.listen(app, '/wsdl', soapService, xml, function (){
         app.listen( port , function(){console.log(`port Soap :${port}`)});
     });
 }
