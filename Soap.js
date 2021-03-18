@@ -13,13 +13,13 @@ var soapService =
                 let prixByPoids = 0.33;
                 let prixByDistance = 1.33;
                 
-                let prixPoids = args.poids * prixByPoids;
-                let prixDist = args.distance * prixByDistance;
+                let prixPoids = args.poids * prixByPoids + args.prix/2;
+                let prixDist = args.distance * prixByDistance + args.prix/2;
 
-                let prix = (prixPoids + prixDist) * 1.33;
+                let prixTot = (prixPoids + prixDist) * 1.33;
                 
                 return {
-                    prixTotal: prix
+                    prixTotal: prixTot
                 };
             }
         }
