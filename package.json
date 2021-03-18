@@ -1,0 +1,15 @@
+{
+  "name": "info802_soap_service",
+  "version": "1.0.0",
+  "description": "ServiceSoapJs",
+  "main": "serveur.js",
+  "scripts": {
+    "start": "node Soap.js"
+  },
+  "author": "Virgile",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "express": "^4.17.1",
+    "soap": "^0.36.0"
+  }
+}
