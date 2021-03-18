@@ -19,7 +19,7 @@ var soapService =
                 let prix = (prixPoids + prixDist) * 1.33;
                 
                 return {
-                    prixLivraison: prix
+                    prixTotal: prix
                 };
             }
         }

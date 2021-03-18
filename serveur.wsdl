@@ -7,8 +7,6 @@ xmlns:intf="https://info802-soap-service.herokuapp.com/wsdl"
 xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" 
 xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" 
 xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-<!--WSDL created by Apache Axis version: 1.4
-Built on Apr 22, 2006 (06:55:48 PDT)-->
  <wsdl:types>
   <schema elementFormDefault="qualified" targetNamespace="https://info802-soap-service.herokuapp.com/wsdl" xmlns="http://www.w3.org/2001/XMLSchema">
    <element name="coutLivraison">
@@ -22,7 +20,7 @@ Built on Apr 22, 2006 (06:55:48 PDT)-->
    <element name="coutLivraisonResponse">
     <complexType>
      <sequence>
-      <element name="prixLivraison" type="xsd:float"/>
+      <element name="prixTotal" type="xsd:float"/>
      </sequence>
     </complexType>
    </element>
@@ -45,7 +43,7 @@ Built on Apr 22, 2006 (06:55:48 PDT)-->
 
    </wsdl:message>
 
-   <wsdl:portType name="prixLivraison">
+   <wsdl:portType name="prixTotal">
 
       <wsdl:operation name="coutLivraison">
 
@@ -61,7 +59,7 @@ Built on Apr 22, 2006 (06:55:48 PDT)-->
 
    </wsdl:portType>
 
-   <wsdl:binding name="prixLivraisonSoapBinding" type="impl:prixLivraison">
+   <wsdl:binding name="prixTotalSoapBinding" type="impl:prixTotal">
 
       <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
 
@@ -87,7 +85,7 @@ Built on Apr 22, 2006 (06:55:48 PDT)-->
 
    <wsdl:service name="servicesCoutLivraison">
 
-      <wsdl:port binding="impl:prixLivraisonSoapBinding" name="prixLivraison">
+      <wsdl:port binding="impl:prixTotalSoapBinding" name="prixTotal">
 
          <wsdlsoap:address location="https://info802-soap-service.herokuapp.com/wsdl"/>
 
