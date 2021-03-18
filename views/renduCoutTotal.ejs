@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>VirtualRestorationTotalCostShowCaser</title>
+        <script src="https://checkout.stripe.com/checkout.js" defer></script>
+
+       <script>
+            var stripePublicKey = '<%= stripePublicKey %>'
+        </script> 
+        <script src="payement.js" defer></script>
+        <meta charset="UTF-8">
+    </head>
+
+    <body>
+        <p class="costPoid">le prix par rapport au poids pour la transaction est de <%= prixPoid %>€</p>
+        <p class="costDist">le prix par rapport à la distance pour la transaction est de <%= prixDist %>€</p>
+        <p class="basicCost">le prix sans frais pour la transaction est de <%= prixSansFrais %>€</p>
+        <p class="totalCost">le prix total pour la transaction (l'ensemble des prix au dessus + la TVA + le coup de la restoration) est de <%= prixTotal %>€</p>
+            <button class="cardSelector" type="button">Payer</button>
+    </body>
+</html> 
