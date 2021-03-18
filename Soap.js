@@ -4,9 +4,9 @@ var app = require('express')();
 
 var soapService = 
 {
-    serviceCout: 
+    servicesCoutLivraison: 
     {
-        prixTotal: 
+        coutTotal: 
         {
             coutLivraison: function (args)
             {
