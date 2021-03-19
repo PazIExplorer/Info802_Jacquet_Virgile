@@ -9,3 +9,9 @@ css basique (mais vraiment basique)
 reste a faire:
 client graphql + serveur firebase
 un vrai css (il est quand même moche l'actuel)
+
+Pour la carte de crédit :
+mail:libre mais normal
+code:4242 4242 4242 4242
+date:libre
+cvc: libre
