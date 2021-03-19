@@ -2,7 +2,7 @@
   "name": "info802-service-client",
   "version": "1.0.0",
   "description": "service client d'info802",
-  "main": "serveur.js",
+  "main": "clientWeb.js",
   "scripts": {
     "start": "node clientWeb.js"
   },
