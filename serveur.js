@@ -34,7 +34,9 @@ app.post("/cost", function(req, res)
                  prixPoid: result.prixPoid,
                  prixDist: result.prixDist,
                  prixSansFrais: result.prixSansFrais,
-                 prixTotal: result.prixTotal 
+                 prixTotal: result.prixTotal, 
+                 poids: req.body.poids,
+                 distance: req.body.distance
              });
         });
     });

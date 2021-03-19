@@ -12,10 +12,10 @@
     </head>
 
     <body>
-        <p class="costPoid">le prix par rapport au poids pour la transaction est de <%= prixPoid %>€</p>
-        <p class="costDist">le prix par rapport à la distance pour la transaction est de <%= prixDist %>€</p>
-        <p class="basicCost">le prix sans frais pour la transaction est de <%= prixSansFrais %>€</p>
-        <p class="totalCost">le prix total pour la transaction (l'ensemble des prix au dessus + la TVA + le coup de la restoration) est de <%= prixTotal %>€</p>
+        <p class="costPoid">le cout pour <%= poids%>kg est de <%= prixPoid %>€</p>
+        <p class="costDist">le cout pour <%=distance%>km  est de <%= prixDist %>€</p>
+        <p class="basicCost">le cout sans charge est de <%= prixSansFrais %>€</p>
+        <p class="totalCost">le cout total pour la transaction est de <%= prixTotal %>€</p>
             <button class="cardSelector" type="button">Payer</button>
     </body>
 </html> 
