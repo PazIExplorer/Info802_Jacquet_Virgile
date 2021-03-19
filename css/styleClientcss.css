@@ -1,0 +1,17 @@
+h1,footer{
+    background-color: darkcyan;
+}
+footer{
+    position:absolute;
+    bottom:0;
+    width:100%;
+}
+body{
+    background-color: lightgrey;
+    text-align: center;
+}
+input{
+    background-color: white;
+    color: black;
+    border: 2px solid black; /* Green */
+}

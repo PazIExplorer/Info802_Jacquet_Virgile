@@ -1,0 +1,25 @@
+footer{
+    position:absolute;
+    bottom:0;
+    width:100%;
+    background-color: darkcyan;
+}
+body{
+    background-color: lightgrey;
+    text-align: center;
+}
+p{
+    font-weight: 500;
+    font-style: Helvetica;
+}
+button {
+    transition-duration: 0.4s;
+    background-color: white; 
+    color: black;
+    border-radius: 4px;
+}  
+button:hover {
+    background-color: grey;
+    color: black;
+    border-radius: 8px;
+  }

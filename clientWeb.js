@@ -23,25 +23,6 @@ const clePublic = "pk_test_51IWLJZI6Zz8My46gjMAzscBHYvVQEJRJRf9xrUWRpgLOLSfoPLf2
 const stripe = require("stripe")(cleSecret);
 app.use("/",express.static(__dirname));
 
-app.post("/cost", function(req, res)
-{
-    var url = 'https://info802-soap-service.herokuapp.com/wsdl?wsdl'; 
-    var args = { poids: req.body.poids, distance: req.body.distance, prix: req.body.prix };
-    soap.createClient(url, function (err, client) {
-        client.coutLivraison(args, function (err, result, raw) {
-            res.render("renduCoutTotal",{
-                 clePublic : clePublic,
-                 prixPoid: result.prixPoid,
-                 prixDist: result.prixDist,
-                 prixSansFrais: result.prixSansFrais,
-                 prixTotal: result.prixTotal, 
-                 poids: req.body.poids,
-                 distance: req.body.distance
-             });
-        });
-    });
-});
-
 
 
 app.post('/transaction', function(req, res)
@@ -68,3 +49,31 @@ app.post('/transaction', function(req, res)
           });
         }
 });
+
+
+
+
+
+
+
+app.post("/cost", function(req, res)
+{
+    var url = 'https://info802-soap-service.herokuapp.com/wsdl?wsdl'; 
+    var args = { poids: req.body.poids, distance: req.body.distance, prix: req.body.prix };
+    soap.createClient(url, function (err, client) {
+        client.coutLivraison(args, function (err, result, raw) {
+            res.render("renduCoutTotal",{
+                 clePublic : clePublic,
+                 prixPoid: result.prixPoid,
+                 prixDist: result.prixDist,
+                 prixSansFrais: result.prixSansFrais,
+                 prixTotal: result.prixTotal, 
+                 poids: req.body.poids,
+                 distance: req.body.distance
+             });
+        });
+    });
+});
+
+
+

@@ -4,6 +4,7 @@
         
         <title>VirtualRestorationTotalCostShowCaser</title>
         <script src="https://checkout.stripe.com/checkout.js" defer></script>
+        <link rel="stylesheet" href="./css/styleTotalCost.css">
 
        <script>
             var stripeKey = '<%= clePublic %>'
@@ -13,11 +14,12 @@
     </head>
 
     <body>
+        <header><h1>Ticket du coup total</h1></header>
         <p class="costPoid">le cout pour <%= poids%>kg est de <%= prixPoid %>€</p>
         <p class="costDist">le cout pour <%=distance%>km  est de <%= prixDist %>€</p>
         <p class="basicCost">le cout sans charge est de <%= prixSansFrais %>€</p>
         <p class="totalCost">le cout total pour la transaction est de <b class="cost"><%= prixTotal %></b> €</p>
-            <button class="cardSelector" type="button">Payer</button>
+            <button class="cardSelector" type="button">Procéder au payement</button>
         <p class="result"></p>
     </body>
 </html> 
