@@ -4,7 +4,7 @@
   "description": "service client d'info802",
   "main": "serveur.js",
   "scripts": {
-    "start": "node serveur.js"
+    "start": "node clientWeb.js"
   },
   "author": "Virgile",
   "license": "UNLICENSED",
